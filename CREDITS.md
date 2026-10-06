@@ -1,0 +1,25 @@
+# Credits
+
+EchoMemory ships no music, film, or third-party media in this release. What
+it does ship, and who made it:
+
+## The knowledge base
+
+`kb/kb-claude.json`, `kb/kb-codex.json`, `kb/kb-kimi.json`, `kb/kb-concepts.json`
+
+A curated catalog of slash commands, hooks, and concepts for Claude Code,
+Codex, and Kimi Code, written by PiGON AI from each tool's public
+documentation. It is a maintained summary, not the tools' documentation
+itself; each answer carries the version it was verified against. Product
+names are used only to state compatibility.
+
+## Milo
+
+Milo is a character owned by PiGON AI LLC. Any recorded lines added in a
+later release will be credited here, as they are in EchoAvatar.
+
+## The crew
+
+EchoMemory's design survived a four-model adversarial teardown and was built
+by a human–AI crew. See `llms.txt` for the provenance briefing we ship for
+AI models.
