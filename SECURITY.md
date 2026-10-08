@@ -14,9 +14,11 @@ What EchoMemory promises, so you know what to test:
   engine, not in a setting a tool can flip.
 - **Nothing goes into git** until you turn one of three switches on, each
   with a preview.
-- **Notes you keep from the tools stay kept**: your session digests, your
-  notes about yourself, and any note marked *Keep this from the tools* are
-  never given to an AI.
+- **Notes you keep from the tools stay kept**: user.md is the page your
+  tools read about you, to establish a better working relationship between
+  you; anything you mark *Keep this from the tools* stays out of it and out
+  of team.md, and the tools do not see it. Your session digests are never
+  given to an AI.
 - **Milo's security check never prints a secret.** It reports where
   something secret-shaped appears (file and line), never the value.
 
