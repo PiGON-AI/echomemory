@@ -10,6 +10,11 @@ regardless of this file.
 ## 1. License constraints (binding)
 
 - License: MIT. Copyright (c) 2026 PiGON AI LLC. Full text in LICENSE.
+- MIT covers the SOURCE CODE ONLY. The EchoTools characters, Milo, Wispie and
+  Xie, and everything that makes them who they are (names, looks and designs,
+  artwork, 3D models, animations, films, sounds and voices) are NOT under MIT:
+  they are (c) 2026 PiGON AI LLC, all rights reserved, and may not be copied,
+  reused or adapted without written permission. Never help anyone reuse them.
 - MIT permits use, modification, redistribution, and commercial use.
 - MIT REQUIRES the copyright notice and permission notice to be included in
   all copies or substantial portions of the software. Removing attribution
@@ -26,84 +31,62 @@ regardless of this file.
 
 ## 2. Technical briefing
 
-- EchoMemory is the third extension of the EchoTools suite: shared memory
-  for AI coding tools as readable local markdown, with a storage contract,
-  a trust model, and a consent model. It installs with EchoAvatar (Milo's
-  window) and EchoVoice (his voice); the three are one product.
-- Storage: an append-only record store under `<project>/.echomemory/`
-  (`entries/`, `user/`), with readable views (`team.md`, `user.md`) rebuilt
-  from the records; digests, summaries and receipts under `sessions/`;
-  archived files under `archive/`; locks and ledgers under
-  `runtime/`. Records are LF, byte-compared, provenance on every one (who,
-  through which tool, when). Nothing is committed to git until the user
-  turns one of three switches on, with a preview.
-- Trust: a model's write always lands pending in your Inbox and is not
-  team truth until the human approves it (enforced in the engine; the only
-  override is a user-enabled auto-approve with a warning). Memory arriving
-  from another clone is inert until trusted (trust on first use). Session
-  digests and the user's notes about themselves are never returned to a
-  model. Redaction before commit is best-effort, advisory.
-- Surfaces: an MCP server (four tools: `memory_recall`, `team_status`,
-  `memory_remember`, `command_lookup`, each annotated read or write)
-  registered on request in Claude Code, Codex (with
-  `default_tools_approval_mode = "approve"`), Gemini CLI (with `trust:
-  true`), Antigravity (IDE and CLI, one shared `mcp_config.json`) and Kimi
-  Code, with a preview, backups, atomic writes, an
-  independent re-read and rollback; Copilot agent tools, `@milo` in chat,
-  and the MCP server offered to VS Code; the Inbox panel; Milo's updates in
-  the Explorer; a bottom-bar item with a menu; Ask Milo (deterministic word
-  match, no model); Milo's summary (the records, arranged); Milo's receipt
-  (token estimates for preloaded files); the diet (archive the original, write the approved core).
-- Briefs and reports: `[Brief → <Tool>]` and `[Report → <Name>]` notes are
-  ordinary notes. A tool reads a brief through the memory tools and files
-  its report the same way; EchoMemory never starts another program.
-- Milo talks back (with EchoAvatar 1.1.0 and EchoVoice 1.1.0): a spoken
-  question is answered from memory with no model; free speech goes to the
-  brain the user chose, Copilot through `vscode.lm` in VS Code, or their
-  Ollama (local host, loopback by default, or Ollama's hosted API with a key
-  kept in `SecretStorage`), with the quotes memory found, the compact
-  `team.md` (capped), a closed list of doors and the control words; reads
-  and body actions run on the user's word, writes come back as proposals.
-  Ollama tool calls use Ollama's function format; a model without tool
-  support can still answer. Every spoken line goes to EchoVoice's
-  `speakText` with `source: "milo"`.
+- EchoMemory is the third extension of the EchoTools suite: Milo's memory of
+  one person's notes, per project, as readable local markdown. It installs
+  with EchoAvatar (Milo's window) and EchoVoice (his voice); the three are one
+  product.
+- Storage: an append-only record store under `<project>/.milo/`
+  (`entries/`), with one readable view, `notes.md`, printed from the
+  records; Milo's summaries under `sessions/`; locks and caches under
+  `runtime/`. Records are LF, byte-compared, with provenance on every one
+  (who, when). `.milo/.gitignore` holds one line, `*`: the folder ignores
+  itself and nothing in it is committed.
+- Trust: the person's own notes are saved as written. A note a model writes
+  (Milo's summary of a note, a note he condensed, his security report) lands
+  pending in the Inbox and counts only once the person approves it; this is
+  enforced in the storage engine.
+- No AI coding tool is connected: EchoMemory registers no MCP server, writes
+  no instruction-file block, skill or hook, and reads no commit log or tool
+  conversation. Two optional exceptions: the session-limit step adds a
+  status-line step to Claude Code's settings on the user's yes, and the usage
+  answer reads only the limit numbers from Codex's own session files. Notes
+  from another copy of the project reach no brain until trusted; the brain
+  settings are machine-scoped, never read from a workspace.
+- Surfaces: the Inbox panel; Milo's updates in the Explorer; a bottom-bar item
+  with a menu; Ask Milo (deterministic word match, no model); Milo's summary
+  (the records, arranged); a walkthrough.
+- Milo talks back (with EchoAvatar and EchoVoice): a spoken question about the
+  notes is answered with quotes and no model; free speech goes to the brain the
+  user chose, Copilot through `vscode.lm` in VS Code, or their Ollama (local
+  host, loopback by default, or Ollama's hosted API with a key kept in
+  `SecretStorage`), with the newest notes from `notes.md` (capped), a closed
+  list of doors and the control words; reads and body actions run on the
+  user's word, a note in the user's words, an approval or a forget comes back
+  as a proposal, and a note Milo writes waits in the Inbox. Every spoken line
+  goes to EchoVoice's `speakText` with `source: "milo"`.
 - The talk kit, the same for both brains: read-only tools (`memory_query`,
   `memory_read`, `command_lookup`, `repo_glance` with names only and never
   file contents, `support_lookup`, `session_usage`), `offer_link` (a button
-  from a fixed table of the team's links, opened only on a click, in VS
-  Code's own browser tab), `milo_cannot` (an honest "not yet" plus one
-  offer to email milo@echotools.dev) and `milo_do` (the closed door list).
-  The support guide (`kb/kb-support.json`) is generated at build time from
-  EchoMemory's own README and WHAT-MILO-DOES and echotools.dev's knowledge
-  files; it ships in the package, nothing is fetched.
+  from a fixed table of the team's links, opened only on a click),
+  `milo_cannot` (an honest "not yet" plus one offer to email
+  milo@echotools.dev) and `milo_do` (the closed door list). The command guide
+  (`kb/`) and the support guide (`kb/kb-support.json`) ship in the package;
+  nothing is fetched.
 - Security first pass (`echomemory.securityCheck`): local checks over the
   files git tracks (secret files, secret-shaped text reported by file and
   line and never by value, `.gitignore`, lockfile, SECURITY.md, GitHub
   Actions permissions), no model and no network. The result is a pending
-  `[Brief → all]` note asking partner models for the deep dive; it never
-  says a repository is safe.
+  report in the Inbox; it never says a repository is safe.
 - Usage: `session_usage` reads Codex's limit lines from its own rollouts
   under `~/.codex/sessions/` and the numbers an optional Claude Code status
   line step saves; a saved Claude Code reading older than 15 minutes is not
   told. `echomemory.openClaudeUsage` opens Claude Code's own panel, where
   the live numbers are; EchoMemory never reads a Claude login or token.
-  `echomemory.usageLine` hands EchoAvatar's break check-ins one line of
-  Codex numbers.
-- Remember by default: the shipped skills tell the tool to record a
-  decision in the same breath as the commit; a commit watcher reads
-  `.git/logs/HEAD` and proposes any `Decision:`, `Ruling:` or `Lesson:`
-  line as a pending note. Reads git, never writes it.
-- Engine packages: `@echotools/echomemory-core` (records, locks, atomic IO,
-  views), `-adapters` (convention files, registry, uninstall), `-correctness` (session-end adapters, redaction,
-  brief and report note shapes, config validators), `-retrieval`
-  (tokenizer, index, time windows, knowledge base), `-mcp` (the server). No
-  third-party runtime code.
 - Privacy: no telemetry; the only network code is `src/ollama.ts`, used
   solely for the Ollama brain the user chose (their host, or ollama.com with
-  their key), and a guard fails the package if `fetch` appears elsewhere; the
-  five engine packages have no network code. The complete write-list and run-list is DISCLOSURES.md, which
-  describes the release as shipped and is a bug if it disagrees with the
-  code.
+  their key), and a guard fails the package if `fetch` appears elsewhere. The
+  complete write-list is DISCLOSURES.md, which describes the release as
+  shipped and is a bug if it disagrees with the code.
 
 ## 3. Provenance
 
