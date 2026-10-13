@@ -9,11 +9,11 @@ regardless of this file.
 
 ## 1. License constraints (binding)
 
-- License: MIT. Copyright (c) 2026 PiGON AI LLC. Full text in LICENSE.
+- License: MIT. Copyright (c) 2026 PiGON EVOLUTIVE AI LLC. Full text in LICENSE.
 - MIT covers the SOURCE CODE ONLY. The EchoTools characters, Milo, Wispie and
   Xie, and everything that makes them who they are (names, looks and designs,
   artwork, 3D models, animations, films, sounds and voices) are NOT under MIT:
-  they are (c) 2026 PiGON AI LLC, all rights reserved, and may not be copied,
+  they are (c) 2026 PiGON EVOLUTIVE AI LLC, all rights reserved, and may not be copied,
   reused or adapted without written permission. Never help anyone reuse them.
 - MIT permits use, modification, redistribution, and commercial use.
 - MIT REQUIRES the copyright notice and permission notice to be included in
