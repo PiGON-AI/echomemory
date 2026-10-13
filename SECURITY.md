@@ -9,19 +9,18 @@ What EchoMemory promises, so you know what to test:
 
 - **No telemetry, no server, no account.** The only network code is the
   Ollama brain you choose, to the host you set.
-- **A model never writes team truth on its own.** Every note an AI tool
-  saves waits in your Inbox until you approve it; that rule lives in the
-  engine, not in a setting a tool can flip.
-- **Nothing goes into git** until you turn one of three switches on, each
-  with a preview.
-- **Notes you keep from the tools stay kept**: user.md is the page your
-  tools read about you, to establish a better working relationship between
-  you; anything you mark *Keep this from the tools* stays out of it and out
-  of team.md, and the tools do not see it. Your session digests are never
-  given to an AI.
+- **Your notes stay yours.** They are plain files in `.milo/` in your
+  project. The folder ignores itself in git, and no AI coding tool is
+  connected to it.
+- **Milo never writes a note on his own.** A note he condenses or summarizes
+  for you waits in your Inbox until you approve it; that rule lives in the
+  storage engine, not in a setting.
+- **A project can't steer Milo.** Notes that arrive in someone else's copy
+  of a project reach no AI brain until you have checked and trusted them,
+  and a project's own settings can't change where your words go.
 - **Milo's security check never prints a secret.** It reports where
   something secret-shaped appears (file and line), never the value.
 
-The complete list of what EchoMemory reads, writes and runs is
+The complete list of what EchoMemory reads, writes and hands on is
 [DISCLOSURES.md](DISCLOSURES.md). If that page and the extension ever
 disagree, that's a bug, and we'd like to hear about it.
