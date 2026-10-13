@@ -13,9 +13,9 @@ suite by PiGON AI. **No telemetry, no server, no account. Nothing you write
 or ask leaves your machine through us**; the one exception is the brain you
 choose for talking to Milo, and the page below says exactly where that goes.
 
-## Why EchoMemory
+<img src="images/hero.png" width="400" alt="Milo's notebook: asked how do we deploy, Milo answers from the note saved that morning, naming the time it was noted" />
 
-*Draft for Myriam's red pen.*
+## Why EchoMemory
 
 - **Ask, and get your own words back.** Milo answers from your notes, quoted,
   with the day you wrote them. No guessing at what you meant.
@@ -55,6 +55,15 @@ choose for talking to Milo, and the page below says exactly where that goes.
 **Show me how to use EchoMemory** in the menu walks you through it, step by
 step.
 
+## Meet EchoMemory
+
+Milo introduces EchoMemory in a short film:
+[watch it on echotools.dev](https://echotools.dev/#echomemory) or on our
+[Instagram](https://www.instagram.com/codepeeps/). **EchoMemory: Meet
+EchoMemory** opens a panel with both links and his quick tips, and the
+walkthrough's first step opens the same panel. The film lives on the web, not
+in the package, so Milo stays light.
+
 ## Milo talks back
 
 With EchoAvatar and EchoVoice (they install with this), hold the button in
@@ -69,6 +78,8 @@ opens right here in VS Code) for anything deeper. Ask how much you have left:
 he gives Codex's limits and opens Claude Code's own usage panel. Ask him to
 check your repository's security: he runs a first pass and puts a report in
 your Inbox.
+
+<img src="images/notebook.png" width="400" alt="Milo's notebook answering a question about slash commands in Claude Code, Codex and Kimi Code, with two checked /help tips, each with Save as a note" />
 
 **Milo's brain.** In VS Code it's your own Copilot. In editors without
 Copilot (the Antigravity IDE, Cursor, Windsurf), or in VS Code if you prefer,
@@ -124,6 +135,7 @@ that's a bug: tell us.
 | EchoMemory: Choose Milo's brain model | Pick the Ollama model Milo thinks with; size and where it runs shown |
 | EchoMemory: Set / Clear Ollama API key | For Ollama's hosted models; kept in the secret store |
 | Get help from Milo | Milo's office, inside VS Code |
+| Meet EchoMemory | Milo's film and a few quick tips |
 | Show me how to use EchoMemory | The step-by-step start |
 
 ## Settings
