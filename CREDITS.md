@@ -18,7 +18,7 @@ EchoMemory's own docs and the knowledge on echotools.dev.
 
 ## Milo
 
-Milo is a character owned by PiGON AI LLC, © 2026, all rights reserved, and
+Milo is a character owned by PiGON EVOLUTIVE AI LLC, © 2026, all rights reserved, and
 is not covered by the MIT license (see LICENSE). Any recorded lines added in
 a later release will be credited here, as they are in EchoAvatar.
 

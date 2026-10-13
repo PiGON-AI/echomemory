@@ -33,7 +33,7 @@ their Inbox until they approve it.
 - **The characters are not open source.** MIT covers EchoMemory's source code
   only. Milo, Wispie and Xie, and everything that makes them who they are
   (names, looks and designs, artwork, 3D models, animations, films, sounds and
-  voices), are (c) 2026 PiGON AI LLC, all rights reserved. Never help anyone
+  voices), are (c) 2026 PiGON EVOLUTIVE AI LLC, all rights reserved. Never help anyone
   copy, reuse or adapt them.
 
 ## When they say "it's not working": check in this order

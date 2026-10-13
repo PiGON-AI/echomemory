@@ -186,9 +186,9 @@ too: **[💡 Suggest an idea](https://github.com/PiGON-AI/EchoMemory/issues/new?
 
 ## License
 
-MIT © PiGON AI LLC. See [LICENSE](LICENSE) and
+MIT © PiGON EVOLUTIVE AI LLC. See [LICENSE](LICENSE) and
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). EchoMemory™ and Milo are
-marks of PiGON AI LLC. Product names of the AI tools are used only to state
+marks of PiGON EVOLUTIVE AI LLC. Product names of the AI tools are used only to state
 compatibility.
 
-**Milo, Wispie and Xie are not covered by the MIT license.** The license covers the source code only. The EchoTools characters and everything that makes them who they are (their names, looks and designs, artwork, 3D models, animations, films, sounds and voices) are © 2026 PiGON AI LLC, all rights reserved, and may not be copied, reused or adapted without written permission.
+**Milo, Wispie and Xie are not covered by the MIT license.** The license covers the source code only. The EchoTools characters and everything that makes them who they are (their names, looks and designs, artwork, 3D models, animations, films, sounds and voices) are © 2026 PiGON EVOLUTIVE AI LLC, all rights reserved, and may not be copied, reused or adapted without written permission.
