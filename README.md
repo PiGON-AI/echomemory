@@ -59,7 +59,7 @@ step.
 
 Milo introduces EchoMemory in a short film:
 [watch it on echotools.dev](https://echotools.dev/#echomemory) or on our
-[Instagram](https://www.instagram.com/codepeeps/). **EchoMemory: Meet
+[Instagram](https://www.instagram.com/p/Dec5_ILvbus/). **EchoMemory: Meet
 EchoMemory** opens a panel with both links and his quick tips, and the
 walkthrough's first step opens the same panel. The film lives on the web, not
 in the package, so Milo stays light.
