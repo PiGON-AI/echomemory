@@ -15,7 +15,7 @@ promises in the present tense.
 
 ## What Milo does today
 
-**As of 2026-10-09 · EchoMemory 1.0.0 (preview)**
+**As of 2026-10-26 · EchoMemory 1.0.1 (preview)**
 
 ### The problem he solves
 
