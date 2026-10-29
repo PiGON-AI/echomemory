@@ -64,6 +64,14 @@ EchoMemory** opens a panel with both links and his quick tips, and the
 walkthrough's first step opens the same panel. The film lives on the web, not
 in the package, so Milo stays light.
 
+## Milo says what's new
+
+The first time a window opens after EchoVoice, EchoAvatar or EchoMemory
+updates, Milo gives a short rundown in his own voice and a notification offers
+the full release notes. He reads them from each extension's own notes on your
+machine, once per version. **What's new, Milo?** in the EchoMemory menu opens
+the same page any time.
+
 ## Milo talks back
 
 With EchoAvatar and EchoVoice (they install with this), hold the button in
@@ -136,6 +144,7 @@ that's a bug: tell us.
 | EchoMemory: Set / Clear Ollama API key | For Ollama's hosted models; kept in the secret store |
 | Get help from Milo | Milo's office, inside VS Code |
 | Meet EchoMemory | Milo's film and a few quick tips |
+| What's new, Milo? | The newest EchoVoice, EchoAvatar and EchoMemory release notes, in Milo's words |
 | Show me how to use EchoMemory | The step-by-step start |
 
 ## Settings
