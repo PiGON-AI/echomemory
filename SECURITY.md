@@ -8,7 +8,14 @@ reports that test them are welcome and will be answered.
 What EchoMemory promises, so you know what to test:
 
 - **No telemetry, no server, no account.** The only network code is the
-  Ollama brain you choose, to the host you set.
+  brain you choose: the Ollama brain, to the host you set (or ollama.com
+  with your key), or the Claude brain, to Anthropic's API with your own key.
+  A guard fails the package if network code appears anywhere else.
+- **Reminders, the calendar and contacts are kept on your machine.** When
+  you ask Milo about your days, the reminders and meetings he reads go to the
+  brain you chose, like your notes; contacts never do. EchoLive reads them
+  through EchoMemory inside your editor; notes it files arrive in your Inbox
+  as proposals.
 - **Your notes stay yours.** They are plain files in `.milo/` in your
   project. The folder ignores itself in git, and no AI coding tool is
   connected to it.

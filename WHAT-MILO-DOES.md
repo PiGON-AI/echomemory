@@ -15,7 +15,7 @@ promises in the present tense.
 
 ## What Milo does today
 
-**As of 2026-10-29 · EchoMemory 1.0.2 (preview)**
+**As of 2026-11-17 · EchoMemory 1.1.0 (preview)**
 
 ### The problem he solves
 
@@ -66,6 +66,43 @@ page changes nothing he remembers.
 - **Milo's updates**: a glance in the Explorer at the last things that
   happened in your notes.
 
+### Reminders, the calendar and countdowns
+
+- **Pin a reminder** from the menu, or just ask Milo: "remind me in 2 minutes
+  to check the build." Asking is the yes, so he sets it at once, says the
+  moment back, and the notification offers Undo. He rings it at that time,
+  while VS Code is open: his window shows it and he says it. You mark it
+  Done, or snooze it for 10 minutes, 1 hour, or until tomorrow at 9 am.
+- **Ask about your days**: "what meetings did I have today?", "what's on
+  tomorrow?", "what did I finish this week?" Milo reads his calendar and
+  answers: reminders, meetings, calls and holidays, a week back and a week
+  ahead.
+- **The calendar**: Milo's Memory has two tabs, Inbox and Calendar. The
+  Calendar shows what's due now, each day ahead by time, your meetings with
+  Join, the holidays, and what you finished this week. The Calendar button in
+  Milo's menu opens it.
+- **Countdowns**: ask "how long till Christmas?" Milo counts down to every US
+  federal holiday and Halloween, and to your meetings. Once a day he brings
+  up the next holiday himself when it's a week away or less. Just date math
+  on your machine.
+
+### Meetings with EchoLive
+
+**EchoLive** (video meetings inside your editor) keeps its calendar in
+EchoMemory. A meeting you book becomes a reminder at its exact moment, in
+your own time zone, with a Join button. When the call ends, its notes come to
+your Inbox and wait for your OK, and so does anything you ask Milo to
+remember during the call. The people you invite are remembered on this
+machine only, so you type each address once; **Forget contacts** clears them.
+
+Ask Milo what happened in a call: he finds it on the calendar, reads its
+meeting notes if they were filed, and says who was there and how long it
+ran. Recordings are saved in the **EchoLive/Recordings** folder in your home
+folder. He can't hear or read what people said or typed in a call unless it
+is in the meeting notes. In a later EchoLive release, EchoLive also tells him
+whether a call was recorded, shows you the file, and lists shares and files
+sent.
+
 ### The Inbox: why you approve things
 
 - **When *you* write a note, it's saved. Done.** No approval, it's your own
@@ -83,7 +120,7 @@ decide what you remember.
 Ask Milo about slash commands and skills in **Claude Code, Codex and Kimi
 Code**: what a command does, how to rename a session, what a skill is. He
 answers from a checked guide that ships with EchoMemory, never from a guess.
-Ask for help with EchoVoice or EchoAvatar and he answers from his support
+Ask for help with EchoVoice, EchoAvatar or EchoLive and he answers from his support
 guide, and offers Milo's office (inside VS Code) for anything deeper.
 
 ### Checks
@@ -103,8 +140,12 @@ guide, and offers Milo's office (inside VS Code) for anything deeper.
   server.
 - **Milo's brain is the one exception.** When you talk to Milo, what you
   say, and any notes he reads to answer you, go to the brain you chose: your
-  own Copilot, or your own Ollama (on your machine, or hosted with your key).
+  own Copilot, your own Ollama (on your machine, or hosted with your key), or
+  Claude with your own Anthropic key (billed to your Anthropic account).
   **Ask Milo** never uses a brain.
+- **Reminders, the calendar and contacts are kept on this machine.** When
+  you ask Milo about your days, the reminders and meetings he reads to answer
+  go to the brain you chose, like your notes; your contacts never do.
 - **No AI coding tool is connected to your notes.** EchoMemory writes nothing
   into your tools' instruction files. The one setting it can add is the
   optional session-limit step for Claude Code, on your yes.
@@ -123,7 +164,8 @@ things are waiting for you. Click it for the menu with every door.
 Being straight about this so nobody promises it by mistake:
 
 - **Milo can't read or change your code**, run your project's commands,
-  browse the web, send messages or use a calendar. (His security check runs
+  browse the web or send messages, and his calendar is his own: it doesn't
+  read or write Google, Outlook or any other calendar. (His security check runs
   git to list your files, and he can open a terminal or a coding tool when
   you ask.) For code help, ask your AI coding tool.
 - **Milo does not use AI to answer Ask Milo.** That's deliberate. It's what
@@ -159,9 +201,6 @@ searches their published docs for you, with a link to the page.
 ---
 
 ## Later: real possibilities, not commitments
-
-- **Reminders and notifications**, and **adding things to your calendar**:
-  the team is exploring these.
 
 - **Summaries of your AI tools' instruction files**: "what changed in our
   CLAUDE.md since last week?"

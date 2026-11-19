@@ -26,11 +26,33 @@ he speaks. Most mysteries end there.
   Milo asks once; "Not now" means he stays blind to them on purpose.
 
 ## Milo's talk answers are vague, or he can't open his doors
-- Milo thinks with your own Copilot in VS Code, or your own Ollama in other
-  editors. Small local models are weaker at quoting and at opening doors;
-  **Choose Milo's brain model** shows what you have and how big each is.
+- Milo thinks with your own Copilot in VS Code, your own Ollama, or Claude
+  with your own Anthropic API key. Small local models are weaker at quoting
+  and at opening doors; **Choose Milo's brain model** shows what you have and
+  how big each is.
 - A brain setting in a project's `.vscode/settings.json` is ignored on
   purpose: set it in your own user settings.
+
+## The Claude brain says no
+- "Anthropic didn't accept that API key": run **Set Anthropic API key**
+  again; Milo checks a key with Anthropic before he keeps it.
+- "Your Anthropic account is out of credit" or "rate-limiting your key":
+  that is your Anthropic account, on the Anthropic Console.
+- "Claude couldn't take that request with this model": choose another model
+  with **Choose Milo's Claude model**. Each answer is billed to your account
+  at the price of the model you pick.
+
+## A reminder didn't ring
+- Reminders ring only while the editor is open, in the project where you
+  set them. One that came due while it was closed is in the summary the next
+  time you open that project, and in **My reminders**.
+- Memory has to be on for the project: reminders live in its `.milo/`.
+
+## Milo said a reminder waits for my yes, and no card came
+- A reminder Milo suggests (from a calendar question, or the fourth in one
+  answer) shows as a card in Milo's window, which needs EchoAvatar 1.3.0 or
+  newer. Update EchoAvatar, or just ask him again in your own words ("remind
+  me at 5 to…"): that one is set at once, with Undo.
 
 ## "How much do I have left?" shows no Claude Code number
 - Milo opens Claude Code's own panel, where **Account and Usage** shows the

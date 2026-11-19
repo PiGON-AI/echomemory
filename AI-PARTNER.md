@@ -27,8 +27,16 @@ their Inbox until they approve it.
 - **`.milo/` ignores itself in git.** Nothing in it is committed.
 - **Read it only if they ask you to.** It is their notebook.
 - **Ask Milo uses no AI**; talking to Milo uses the brain the person chose
-  (their Copilot, or their Ollama, local or hosted), and that brain sees what
-  they say and the notes Milo reads to answer.
+  (their Copilot, their Ollama, local or hosted, or Claude with their own
+  Anthropic API key, billed to their Anthropic account), and that brain sees
+  what they say and the notes Milo reads to answer.
+- **Ask Milo for a reminder and it is set at once** (asking is the yes; the
+  notification offers Undo). He also answers questions about the calendar and
+  past EchoLive calls from his own doors.
+- **Reminders ring only while the editor is open.** Pin a reminder, My
+  reminders, and the Calendar tab in Milo's Memory. Reminders live in
+  `.milo/` with the notes; contacts (people invited in EchoLive) live in the
+  editor's storage on this machine only, never in the project.
 - **Uninstalling never deletes the notes.**
 - **The characters are not open source.** MIT covers EchoMemory's source code
   only. Milo, Wispie and Xie, and everything that makes them who they are
@@ -41,12 +49,15 @@ their Inbox until they approve it.
 1. EchoAvatar and EchoVoice are installed (EchoMemory needs both).
 2. Memory is turned on for this project (the bottom-bar **EchoMemory** item
    offers it).
-3. For talking to Milo: Copilot is signed in, or an Ollama model is chosen
-   (**Choose Milo's brain model**).
+3. For talking to Milo: Copilot is signed in, an Ollama model is chosen, or
+   Claude is chosen with a working Anthropic API key (**Choose Milo's brain
+   model**).
 4. **Show the EchoMemory log** in the menu shows what happened, step by step.
 5. Still stuck: **Report a problem** in the menu, or milo@echotools.dev.
 
 ## The suite
 
-EchoVoice is Milo's voice, EchoAvatar his body, EchoMemory his memory. All
-free, by PiGON AI. https://echotools.dev
+EchoVoice is Milo's voice, EchoAvatar his body, EchoMemory his memory, and
+EchoLive, video meetings inside the editor, works with EchoMemory: it keeps
+its calendar and meeting notes here. All free, by PiGON AI.
+https://echotools.dev

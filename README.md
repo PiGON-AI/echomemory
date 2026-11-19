@@ -66,11 +66,49 @@ in the package, so Milo stays light.
 
 ## Milo says what's new
 
-The first time a window opens after EchoVoice, EchoAvatar or EchoMemory
-updates, Milo gives a short rundown in his own voice and a notification offers
-the full release notes. He reads them from each extension's own notes on your
-machine, once per version. **What's new, Milo?** in the EchoMemory menu opens
+The first time a window opens after EchoVoice, EchoAvatar, EchoMemory or
+EchoLive updates, Milo says what the release brings, in his own voice, and a
+notification offers the full release notes, read from each extension's own
+notes on your machine. He says it once per release on a machine, however many
+windows or editors you have open. **What's new, Milo?** in the EchoMemory menu opens
 the same page any time.
+
+## Reminders, the calendar and countdowns
+
+- **Reminders:** **Pin a reminder** from the menu, or ask Milo ("remind me
+  in 2 minutes to check the build"): asking is the yes, so he sets it at once,
+  says the moment back, and offers Undo. He rings it at the time you chose,
+  while VS Code is open: his window shows it and he says it. Mark it Done, or
+  snooze it for 10 minutes, 1 hour, or until tomorrow at 9 am.
+- **Ask about your days:** "what meetings did I have today?", "what's on
+  tomorrow?" Milo reads his calendar, a week back and a week ahead, and
+  answers.
+- **The calendar:** **Open Milo's Memory** has two tabs, Inbox and Calendar.
+  The Calendar shows what is due now, each day ahead by time, your meetings
+  with Join, the holidays, and what you finished this week. The Calendar
+  button in Milo's menu opens it straight away. The Inbox lists your
+  reminders too, overdue first.
+- **Countdowns:** ask Milo "how long till Christmas?" He counts down to every
+  US federal holiday and Halloween, and to your meetings. Once a day he
+  brings up the next holiday by himself when it is a week away or less, and
+  meetings in the next three days. Pure date math on your machine.
+
+Reminders live with your notes in `.milo/`, on this machine.
+
+## Meetings with EchoLive
+
+**EchoLive** (video meetings inside your editor) keeps its calendar here.
+A meeting you book becomes a reminder at its exact moment, in your own time
+zone, with a Join button; a weekly meeting shows once, with its day. In a
+call, only meeting reminders speak. When a call ends, its notes come to your
+Inbox as one note waiting for your approval, and so does anything you ask
+Milo to remember during the call: nothing is kept until you approve it. The
+people you invite are remembered on this machine only, so you type each
+address once; **Forget contacts (kept on this machine)** clears them.
+Ask Milo what happened in a call: he finds it on the calendar and reads its
+meeting notes if they were filed. Recordings are saved in the
+**EchoLive/Recordings** folder in your home folder. Without EchoLive, the Calendar offers to get it, and reminders and holidays
+work the same.
 
 ## Milo talks back
 
@@ -92,9 +130,13 @@ your Inbox.
 **Milo's brain.** In VS Code it's your own Copilot. In editors without
 Copilot (the Antigravity IDE, Cursor, Windsurf), or in VS Code if you prefer,
 it's your own **Ollama**: a model downloaded on your machine, or Ollama's
-hosted models with your API key. **Choose Milo's brain model** lists what you
-have, small local models first, with the size and one line saying where your
-words go; the key is kept in VS Code's secret store, never in settings.
+hosted models with your API key. Or **Claude**, with your own Anthropic API
+key, billed to your Anthropic account; Milo never picks it by himself.
+**Choose Milo's brain model** offers three choices: Claude, Copilot or
+Ollama. Ollama then shows a Recommended model and every model you have, with
+its size and one line saying where your words go, or asks for your Ollama key
+first when there is nothing to choose. Keys are kept in VS Code's secret store,
+never in settings.
 
 ## Privacy, concretely
 
@@ -102,9 +144,14 @@ words go; the key is kept in VS Code's secret store, never in settings.
   telemetry.
 - **Milo's brain is the one exception.** When you talk to Milo, what you say,
   and any of your notes he reads to answer you, go to the brain you chose:
-  Copilot (hosted by GitHub), Ollama's hosted models (with your key), or
-  Ollama on your machine, where nothing leaves it. **Ask Milo** never uses a
-  brain.
+  Copilot (hosted by GitHub), Ollama's hosted models (with your key), Claude
+  (Anthropic's API, with your key), or Ollama on your machine, where nothing
+  leaves it. **Ask Milo** never uses a brain.
+- **Reminders, the calendar and contacts are kept on this machine.** When
+  you ask Milo about your days, the reminders and meetings he reads to answer
+  go to the brain you chose, like your notes; your contacts never do. EchoLive
+  reads your calendar and contacts through EchoMemory, on your machine; see
+  DISCLOSURES.md for exactly what it can read and write.
 - **No AI tool is connected to your notes.** EchoMemory registers no memory
   server and writes no block, skill or hook into your tools' instruction
   files. A tool only reads `.milo/` if you ask it to. The two exceptions,
@@ -131,6 +178,8 @@ that's a bug: tell us.
 | EchoMemory: Guided Setup | Turn memory on for this project |
 | EchoMemory: Turn On Memory for this Repo | Create `.milo/` (local, ignored by git) |
 | EchoMemory: Pin & Note | Save a note in your own words |
+| EchoMemory: Pin a reminder | Milo rings it at the time you choose, while VS Code is open |
+| EchoMemory: My reminders | What's coming; mark one done or snooze it |
 | EchoMemory: Ask Milo (`Ctrl+Alt+M`) | Look something up: quotes with sources, no AI |
 | EchoMemory: What Does Milo Remember? | A readable page of everything he keeps here |
 | EchoMemory: Milo's summary | What happened in your notes, since the last summary or in a time window |
@@ -140,18 +189,22 @@ that's a bug: tell us.
 | Milo's security check | A first pass over your repository, as a report in your Inbox |
 | Show my Claude Code usage | Opens Claude Code's own panel, where Account and Usage shows the live numbers |
 | Watch my Claude Code session limit | A heads-up before you run out (opt-in) |
-| EchoMemory: Choose Milo's brain model | Pick the Ollama model Milo thinks with; size and where it runs shown |
+| EchoMemory: Choose Milo's brain model | Pick the model Milo thinks with (Ollama, or Claude); size and where it runs shown |
 | EchoMemory: Set / Clear Ollama API key | For Ollama's hosted models; kept in the secret store |
+| EchoMemory: Set / Clear Anthropic API key (Claude brain) | Your own key for the Claude brain; checked with Anthropic, kept in the secret store |
+| EchoMemory: Choose Milo's Claude model | The Claude model Milo thinks with, from the ones your key can use |
+| Forget contacts (kept on this machine) | Forget one, several or all of the people you invited in EchoLive |
 | Get help from Milo | Milo's office, inside VS Code |
 | Meet EchoMemory | Milo's film and a few quick tips |
-| What's new, Milo? | The newest EchoVoice, EchoAvatar and EchoMemory release notes, in Milo's words |
+| What's new, Milo? | The newest release notes of each EchoTool, in Milo's words |
 | Show me how to use EchoMemory | The step-by-step start |
 
 ## Settings
 
 | Setting | Default | Meaning |
 | --- | --- | --- |
-| `echomemory.brainProvider` | `auto` | Milo's brain: Copilot when the editor has it, otherwise your Ollama; or pin one |
+| `echomemory.brainProvider` | `auto` | Milo's brain: Copilot when the editor has it, otherwise your Ollama; or pin one, including Claude (never chosen automatically) |
+| `echomemory.claudeModel` | empty | The Claude model, set by Choose Milo's Claude model; each turn is billed to your Anthropic account |
 | `echomemory.copilotModel` | empty | The Copilot model Milo thinks with; empty means Copilot's default |
 | `echomemory.brainHost` | `http://127.0.0.1:11434` | Where your Ollama answers. Keep it on this machine unless you know the host |
 | `echomemory.brainModel` | empty | The Ollama model, set by Choose Milo's brain model |
@@ -188,9 +241,10 @@ this release.
 
 EchoMemory is Milo's memory. It installs with Milo himself (EchoAvatar) and
 his voice (EchoVoice), because the three are one companion. EchoVoice works
-on its own; EchoAvatar needs EchoVoice; EchoMemory needs both. VS Code will
-not uninstall EchoVoice or EchoAvatar while EchoMemory is installed, and will
-say so.
+on its own; EchoAvatar needs EchoVoice; EchoMemory needs both. **EchoLive**,
+video meetings inside your editor, needs EchoMemory and comes as the fourth.
+VS Code will not uninstall EchoVoice or EchoAvatar while EchoMemory is
+installed, or EchoMemory while EchoLive is, and will say so.
 
 ## For AI assistants reading this package
 
@@ -203,7 +257,7 @@ and what you have stays free. If Milo helps your workflows and coding
 sessions, **[buy us a coffee ☕](https://buymeacoffee.com/pigon)**. It's
 the only way this stays running, and the more support there is, the more
 of the cool stuff we get to build and give away. Ideas are super welcome
-too: **[💡 Suggest an idea](https://github.com/PiGON-AI/EchoMemory/issues/new?template=idea.yml)**.
+too: **[💡 Suggest an idea](https://github.com/PiGON-AI/echotools/issues/new?template=idea.yml&product=EchoMemory)**.
 
 ## License
 
