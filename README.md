@@ -95,6 +95,12 @@ the same page any time.
 
 Reminders live with your notes in `.milo/`, on this machine.
 
+<img src="images/reminder.png" width="386" alt="A reminder ringing in Milo's notebook: shop EchoTools today, with Done, In 10 min, In an hour and Tomorrow 9 am" />
+
+<img src="images/reminder-card.png" width="386" alt="A reminder Milo suggests waits for a yes: the card reads Remind you to shop EchoTools, today at 4:32 pm, with Yes, remind me and Not now" />
+
+<img src="images/inbox-reminders.png" width="296" alt="Milo's Memory, Inbox tab: a Reminders section with shop EchoTools today coming up at 4:32 pm, and Open my calendar" />
+
 ## Meetings with EchoLive
 
 **EchoLive** (video meetings inside your editor) keeps its calendar here.
